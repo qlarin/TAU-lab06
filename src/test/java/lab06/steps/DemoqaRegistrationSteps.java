@@ -71,4 +71,14 @@ public class DemoqaRegistrationSteps {
     public void successMessageHasAppeard() {
        assertEquals(pages.registration().getSuccessMessage(), pages.registration().getResult()); 
     }
+
+    @When("user opens Blog link")
+    public void userClicksOnBlogLink(){        
+        pages.registration().clickBlogLink();
+    }
+
+    @Then("Blog page is shown")
+    public void blogPageIsShown(){
+       assertEquals("Blog | Demoqa | Just another WordPress site", pages.blog().getTitle());
+    }	
 }

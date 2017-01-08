@@ -7,6 +7,8 @@ import java.util.List;
 
 import lab06.steps.DemoqaHomeSteps;
 import lab06.steps.DemoqaRegistrationSteps;
+import lab06.steps.DemoqaBlogSteps;
+import lab06.steps.DemoqaSamplePostSteps;
 
 import org.jbehave.core.Embeddable;
 import org.jbehave.core.configuration.Configuration;
@@ -62,6 +64,8 @@ public class DemoqaWebTest extends JUnitStories {
 		return new InstanceStepsFactory(configuration,
                 new DemoqaHomeSteps(pages),
                 new DemoqaRegistrationSteps(pages),
+                new DemoqaBlogSteps(pages),
+                new DemoqaSamplePostSteps(pages),
                 lifecycleSteps,
 				new WebDriverScreenshotOnFailure(driverProvider, configuration.storyReporterBuilder()));
     }

@@ -20,8 +20,7 @@ public class Registration extends WebDriverPage {
 	private final static String HOBBY_CHECKBOX = "//*[@id='pie_register']/li[3]/div[1]/div[1]/input[2]";
 	private final static String SUBMIT = "//div[contains(@class, 'piereg_submit_button')]/input[1]";
 	private final static String RESULT = "//p[contains(@class, 'piereg_message')]";
-
-	private final static String RESULT_CLASS = "piereg_message";
+	private final static String BLOG_LINK = "//*[@id='menu-primary-menu']/li[5]/a[1]";
 
 	private String successMessage;
 	private DummyUser dummyUser;
@@ -79,5 +78,9 @@ public class Registration extends WebDriverPage {
 
 	public void clickSubmitButton() {
 		findElement(By.xpath(SUBMIT)).click();
+	}
+
+	public void clickBlogLink() {
+		findElement(By.xpath(BLOG_LINK)).click();
 	}
 }
